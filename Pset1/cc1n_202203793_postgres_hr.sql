@@ -28,12 +28,12 @@ ALLOW_CONNECTIONS = true
 ;
 
 /*A partir desse ponto serão criados os esquemas (schemas) e todas as alterações necessarias como:
-   1. Autorização paar a criação de esquemas.
+   1. Autorização para a criação de esquemas.
    2. Criação de esquemas.
    3. Mudança do esquema padrão.
 */
 
--- Troca de usuario postgres, para o usuário criado anteriormente (carlos).
+-- Troca de usuário postgres, para o usuário criado anteriormente (carlos).
 
 \c "dbname=uvv user=carlos password=computacao@raiz"
  
@@ -52,8 +52,8 @@ SET SEARCH_PATH TO hr, "$user", public;
 
 CREATE TABLE regioes (
                 id_regiao INTEGER NOT NULL,  -- campo da tabela que atua como primary key e guarda dados a respeito do id de cada região.
-                nome VARCHAR(25) NOT NULL,  -- Campo responsável por guardar dados à respeito do nome das regiões 
-                CONSTRAINT regioes_pk PRIMARY KEY (id_regiao)
+                nome VARCHAR(25) NOT NULL,  -- Campo responsável por guardar dados à respeito do nome das regiões. 
+                CONSTRAINT regioes_pk PRIMARY KEY (id_regiao) -- comando que define a primary key da tabela da tabela regioes.
 );
 
 
@@ -62,7 +62,7 @@ CREATE UNIQUE INDEX regiao_ak -- Comando resposável pela criação do unique in
  ON regioes
  ( nome );
 
--- comando responsável pela criação da tabela países, e seus respectivos campos 
+-- comando responsável pela criação da tabela países, e seus respectivos campos. 
 
 CREATE TABLE paises (
                 id_pais CHAR(2) NOT NULL,  -- campo da tabela que atua como primary key e guarda dados a respeito do identificador (id) de cada país.
@@ -82,7 +82,7 @@ CREATE TABLE localizacoes (
                 cidade VARCHAR(50) NOT NULL, -- campo da tabela guarda dados a respeito do nome de cada cidade referente a localização de cada departamento.
                 uf VARCHAR(25), -- campo da tabela guarda dados a respeito do uf referente a localização de cada departamento.
                 id_pais CHAR(2) NOT NULL, -- campo da tabela que atua como foreign key da tabela e guarda dados a respeito do identificador (id) de cada país
-                CONSTRAINT localizacoes_pk PRIMARY KEY (id_localizacao) -- comando que define a primary key da tabela localizações
+                CONSTRAINT localizacoes_pk PRIMARY KEY (id_localizacao) -- comando que define a primary key da tabela localizações.
 );
 
 -- comando responsável por criar a tabela departamentos, e seus respectivos campos.
