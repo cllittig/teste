@@ -819,7 +819,7 @@ REFERENCES empregados (id_empregado)
 ALTER TABLE departamentos ADD CONSTRAINT supervisor_departamentos_fk  -- comando que estabelece a foreign key da tabela departamentos, relacionando-a tabela empregados.
 FOREIGN KEY (id_supervisor)
 REFERENCES empregados (id_empregado)
-NOT DEFERRABLE;
+;
 
 
 ALTER TABLE historico_cargos ADD CONSTRAINT cargos_historico_cargos_fk -- comando que estabelece a foreign key da tabela historico_cargos, relacionando-a á tabela cargos (parte da composite key).
