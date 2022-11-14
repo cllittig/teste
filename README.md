@@ -16,7 +16,7 @@ Monitores:
 
 ## 2.  Sobre  esse repositorio  ##
 
-Essse repositorio foi criado e editado para guardar informações e considerações importantes sobre o Primerio  Problem set Pset,
+Essse repositorio foi criado e editado para guardar informações e considerações importantes sobre o Primerio  Problem set (Pset),
 da matéria Design e Desenvolvimento de Banco De Dados , da Universidade de Vila velha.
 
 ## 3. O que é um Pset ##
